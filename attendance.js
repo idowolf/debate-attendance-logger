@@ -30,7 +30,10 @@ async function calculateAttendance(events, debaters, startDate, endDate, society
         .map(event => {
             const date = new Date(event.time._seconds * 1000);
             const participants = debaters
-                .filter(debater => debater.club === societyId && event.registrations[debater.id] && !event.registrations[debater.id].cancelled)
+                .filter(it => it.club == societyId)
+                .filter(it => it.id in event.registrations)
+                .filter(it => !event.registrations[it.id].cancelledOnTime)
+                .filter(it => !event.registrations[it.id].cancelled)
                 .map(debater => debater.full_name_heb);
             return {
                 timestamp: event.time._seconds,
