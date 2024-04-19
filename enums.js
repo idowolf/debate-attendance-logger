@@ -13,4 +13,4 @@ const Month = {
     December: 11
 }
 
-module.exports = Month;
+module.exports = { Month };
