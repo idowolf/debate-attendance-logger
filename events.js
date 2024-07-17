@@ -22,23 +22,3 @@ async function getDebaters() {
 }
 
 module.exports = { getEvents, getDebaters }
-
-
-// promises.push(new Promise((resolve, reject) => {
-//     eventData.doc("Assignments")
-//         .get()
-//         .then((assignmentsDoc) => {
-//             docs.find(elem => elem.id == event.id)["assignments"] = assignmentsDoc.data() || {};
-//             resolve();
-//         })
-//         .catch(err => {
-//             reject(err);
-//         })
-// }))
-
-// let eventData = db
-// .collection("Events")
-// .doc(event.id)
-// .collection("EventData");
-// promises.push(new Promise((resolve, reject) => {
-// eventData.doc("Assignments")
