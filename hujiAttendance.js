@@ -28,7 +28,7 @@ const myDebateSociety = "HUJI";
 
 async function setupOutputDirectory() {
     if (!fs.existsSync('output')) {
-        await fs.mkdir('output');
+        await fs.promises.mkdir('output');
     }
 }
 
